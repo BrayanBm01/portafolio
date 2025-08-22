@@ -1,1 +1,81 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+
+
+@keyframes flotarY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+.cuadro-pequeno {
+    position: absolute;
+    left: 12rem;
+    bottom: -1.25rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 10;
+    animation: flotarY 6s ease-in-out infinite;
+}
+
+
+
+.img-ajustada {
+    object-fit: cover;
+    object-position: 80% center;
+}
+
+
+
+/* efecto inclinacion */
+
+.inclinacion {
+    perspective: 1000px;
+}
+
+.inclinacion-interna {
+    transform-style: preserve-3d;
+    transition: transform 180ms ease;
+    will-change: transform;
+}
+
+
+.inclinacion:hover .inclinacion-interna {
+    transform: scale(1.01);
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .inclinacion-interna {
+        transition: none !important;
+    }
+}
+
+
+
+
+/* zoom */
+@keyframes zoom-suave {
+
+    0%,
+    100% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.imagen-zoom-suave {
+    animation: zoom-suave 12s ease-in-out infinite;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

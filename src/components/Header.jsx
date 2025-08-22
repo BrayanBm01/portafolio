@@ -66,7 +66,6 @@ export const Header = () => {
           onClick={() => setMenuOpen(false)}
         ></div>
       )}
-
     </header>
   );
 };

@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { SeccionDosColumnas } from "./SeccionDosColumnas";
 import { Button } from "../Button";
 
+import { CheckCircle } from "lucide-react";
 import imgGrande from "../../assets/images/como-trabajamos-1.jpg";
 import imgPequena from "../../assets/images/como-trabajamos-2.jpg";
 
@@ -74,7 +75,8 @@ export const ComoTrabajamos = () => {
       derecha={
         <div className="max-w-xl">
           <p className="flex items-center gap-2 text-sm font-bold text-gray-900 mb-3">
-            <span className="text-purple-700">✔</span>
+            <CheckCircle className="text-green-400 w-6 h-6" />
+           
             CÓMO TRABAJAMOS
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-purple-800 mb-4">

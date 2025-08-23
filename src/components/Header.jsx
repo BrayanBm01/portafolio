@@ -42,21 +42,54 @@ export const Header = () => {
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50
           ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="text-lg font-bold text-gray-800">Menú</h2>
+        <div className="flex justify-between items-center p-4 bg-purple-700">
+          <h2 className="text-lg font-bold text-white">Menú</h2>
           <button onClick={() => setMenuOpen(false)}>
-            <XMarkIcon className="h-7 w-7 text-gray-800" />
+            <XMarkIcon className="h-7 w-7 text-white" />
           </button>
         </div>
 
+
         <nav className="flex flex-col gap-4 p-6 text-sm font-semibold text-gray-800">
-          <a href="#inicio" onClick={() => setMenuOpen(false)}>INICIO</a>
-          <a href="#quienes-somos" onClick={() => setMenuOpen(false)}>QUIENES SOMOS</a>
-          <a href="#servicios" onClick={() => setMenuOpen(false)}>SERVICIOS</a>
-          <a href="#planes" onClick={() => setMenuOpen(false)}>PLANES</a>
-          <a href="#blog" onClick={() => setMenuOpen(false)}>BLOG</a>
+          <a
+            href="#inicio"
+            onClick={() => setMenuOpen(false)}
+            className="px-3 py-2 rounded-lg hover:bg-purple-700 hover:text-white transition"
+          >
+            INICIO
+          </a>
+          <a
+            href="#quienes-somos"
+            onClick={() => setMenuOpen(false)}
+            className="px-3 py-2 rounded-lg hover:bg-purple-700 hover:text-white transition"
+          >
+            QUIENES SOMOS
+          </a>
+          <a
+            href="#servicios"
+            onClick={() => setMenuOpen(false)}
+            className="px-3 py-2 rounded-lg hover:bg-purple-700 hover:text-white transition"
+          >
+            SERVICIOS
+          </a>
+          <a
+            href="#planes"
+            onClick={() => setMenuOpen(false)}
+            className="px-3 py-2 rounded-lg hover:bg-purple-700 hover:text-white transition"
+          >
+            PLANES
+          </a>
+          <a
+            href="#blog"
+            onClick={() => setMenuOpen(false)}
+            className="px-3 py-2 rounded-lg hover:bg-purple-700 hover:text-white transition"
+          >
+            BLOG
+          </a>
           <Button texto="CONTACTO" href="#contacto" />
         </nav>
+
+
       </div>
 
       {/* Fondo oscuro cuando el menú está abierto */}
